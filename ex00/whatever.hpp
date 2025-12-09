@@ -12,6 +12,9 @@
 
 #pragma once
 
+// @file iter.hpp
+// @brief Iterates over an array and applies a function to each element.
+
 // What are C++ Templates?
 // -----------------------
 // Templates are a feature that allows writing generic programs(writing codes

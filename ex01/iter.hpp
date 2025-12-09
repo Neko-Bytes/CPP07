@@ -6,7 +6,7 @@
 /*   By: kmummadi <kmummadi@student.42heilbronn.de  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/09 23:04:50 by kmummadi          #+#    #+#             */
-/*   Updated: 2025/12/09 23:33:11 by kmummadi         ###   ########.fr       */
+/*   Updated: 2025/12/09 23:33:09 by kmummadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,10 @@
 
 #include <iostream>
 
-// The iter function template
-// Arguments:
-// 1. address of an array
-// 2. length of the array
-// 3. function to call on each element
+/**
+ * @file iter.hpp
+ * @brief Defines the generic iter function template.
+ */
 
 // Why use 'typename F' instead of a Function Pointer?
 // -------------------------------------------------------------
@@ -37,7 +36,7 @@
 //    - Function Pointer: The compiler must make an indirect call at runtime
 //    (dereference pointer -> jump). Since a pointer can change anytime, it
 //    cannot be inlined.
-//    Hence, It is hard to optimize.
+//    Hence It is hard to optimize.
 //    - Template `F`: The specific type of the function is known at compile
 //    time.
 //      The compiler can often "inline" the code (paste the function body
