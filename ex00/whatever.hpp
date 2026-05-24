@@ -12,7 +12,7 @@
 
 #pragma once
 
-// @file iter.hpp
+// @file whatever.hpp
 // @brief Iterates over an array and applies a function to each element.
 
 // What are C++ Templates?
