@@ -13,7 +13,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) $(OBJS) -o $(NAME)
 
-%.o: %.cpp whatever.hpp
+%.o: %.cpp iter.hpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
