@@ -14,6 +14,7 @@
 
 #include <iostream>
 #include <stdexcept>
+#include <cstddef>
 
 /**
  * @file Array.hpp
@@ -43,13 +44,13 @@ public:
   }
 
   Array &operator=(const Array &other) {
-    if (this != &other)
+    if (this != &other) {
       delete[] _arr;
-
-    _size = other._size;
-    _arr = new T[_size]();
-    for (size_t i = 0; i < _size; i++) {
-      _arr[i] = other._arr[i];
+      _size = other._size;
+      _arr = new T[_size]();
+      for (size_t i = 0; i < _size; i++) {
+        _arr[i] = other._arr[i];
+      }
     }
     return (*this);
   }
@@ -60,7 +61,7 @@ public:
 
   unsigned int size() const { return (_size); };
 
-  T *operator[](const unsigned int &index) const {
+  const T &operator[](const unsigned int &index) const {
     if (index >= _size)
       throw std::out_of_range("Index out of bounds");
     return (_arr[index]);
