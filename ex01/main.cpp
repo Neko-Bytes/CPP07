@@ -13,10 +13,10 @@
 #include "iter.hpp"
 #include <iostream>
 
-// Simple function to print an integer
+// function to print an integer
 void printElement(int &i) { std::cout << i << "\n"; }
 
-// Simple function to increment an integer
+// function to increment an integer
 void incrementElement(int &i) { i++; }
 
 int main(void) {
