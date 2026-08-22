@@ -10,9 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#ifndef ITER_HPP
+# define ITER_HPP
 
-#include <iostream>
+# include <cstddef>
+# include <iostream>
 
 /**
  * @file iter.hpp
@@ -42,7 +44,11 @@
 //      The compiler can often "inline" the code (paste the function body
 //      directly into the loop), making it significantly faster.
 
-template <typename T, typename F> void iter(T *arr, size_t len, F funct) {
+template <typename T, typename F> void iter(T *arr, const size_t len, F funct) {
+  if (!arr)
+    return;
   for (size_t i = 0; i < len; ++i)
     funct(arr[i]);
 }
+
+#endif

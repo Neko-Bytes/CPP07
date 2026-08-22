@@ -10,10 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
-
-// @file whatever.hpp
-// @brief Iterates over an array and applies a function to each element.
+#ifndef WHATEVER_HPP
+# define WHATEVER_HPP
 
 // What are C++ Templates?
 // -----------------------
@@ -31,9 +29,7 @@
 //    explained in ex01)
 
 template <typename T> void swap(T &var1, T &var2) {
-  T temp;
-
-  temp = var1;
+  T temp = var1;
   var1 = var2;
   var2 = temp;
 }
@@ -43,5 +39,7 @@ template <typename T> const T &max(const T &var1, const T &var2) {
 }
 
 template <typename T> const T &min(const T &var1, const T &var2) {
-  return ((var1 >= var2) ? var2 : var1);
+  return ((var1 < var2) ? var1 : var2);
 }
+
+#endif
